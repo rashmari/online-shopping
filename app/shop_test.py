@@ -28,6 +28,9 @@ class CustomerTest(unittest.TestCase):
     customer= Customer(fname,lname,customerid,email)
 
     self.assertEqual(fname, customer.fname)
+    self.assertEqual(lname,customer.lname)
+    self.assertEqual(customerid,customer.cutomer_id)
+    self.assertEqual(email,customer.email)
 
 
 
