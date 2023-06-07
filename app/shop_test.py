@@ -1,5 +1,6 @@
 import unittest
 from shop import Shop
+from customer import Customer
 
 class ShopTest(unittest.TestCase):
   def test_shop_created_correctly(self):
@@ -16,6 +17,23 @@ class ShopTest(unittest.TestCase):
     shop = Shop(shop_name, shop_id)
 
     self.assertEqual("Name: Test Shop Shop ID: 1", str(shop))
+
+class CustomerTest(unittest.TestCase):
+
+  def test_customer_created(self):
+    fname="Rashmi"
+    lname="Kumari"
+    customerid='1'
+    email="rashmi25346@gmail.com"
+    customer= Customer(fname,lname,customerid,email)
+
+    self.assertEqual(fname, customer.fname)
+    self.assertEqual(lname,customer.lname)
+    self.assertEqual(customerid,customer.cutomer_id)
+    self.assertEqual(email,customer.email)
+
+
+
 
 if __name__ == '__main__':
   unittest.main()
